@@ -38,7 +38,7 @@ def conductMain():
         files = sorted(glob.glob(dirPath1 +'/*.png'))  
         images = list(map(lambda file : PIL.Image.open(file) , files))
         images[0].save(dirPath2+'/image.gif',save_all = True , append_images = images[1:] , duration = 400 ,disposal=2, loop = 0)
-        open_folder(repr(dirPath2))
+        #open_folder(repr(dirPath2))
     else:
         messagebox.showerror("error", "パスの指定がありません.")
 
