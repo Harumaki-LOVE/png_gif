@@ -29,6 +29,7 @@ def conductMain():
 
     dirPath1 = entry1.get()
     dirPath2 = entry2.get()
+    Speed = speed.get()
     if dirPath1:
         text += "GIFの作成を完了しました,\n"
     if dirPath2:
@@ -37,7 +38,7 @@ def conductMain():
         messagebox.showinfo("info", text)
         files = sorted(glob.glob(dirPath1 +'/*.png'))  
         images = list(map(lambda file : PIL.Image.open(file) , files))
-        images[0].save(dirPath2+'/image.gif',save_all = True , append_images = images[1:] , duration = 400 ,disposal=2, loop = 0)
+        images[0].save(dirPath2+'/image.gif',save_all = True , append_images = images[1:] , duration = Speed ,disposal=2, loop = 0)
         #open_folder(repr(dirPath2))
     else:
         messagebox.showerror("error", "パスの指定がありません.")
@@ -81,7 +82,18 @@ if __name__ == "__main__":
     # 「ファイル参照」ボタンの作成
     IFileButton = ttk.Button(frame2, text="参照", command=dirdialog_clicked2)
     IFileButton.pack(side=LEFT)
-
+    
+    # Frme4の作成
+    frame4 = ttk.Frame(root, padding=10)
+    frame4.grid(row=2, column=1, sticky=E)
+    
+    #「GIF切り替え時間」ラベルの作成
+    IFileLabel = ttk.Label(frame4, text="GIF切り替え時間(ms)の設定＞＞", padding=(5, 2))
+    IFileLabel.pack(side=LEFT)
+    
+    # テキストボックス
+    speed = ttk.Entry(frame4, width=30)
+    speed.pack(side=LEFT)
     
     # Frame3の作成
     frame3 = ttk.Frame(root, padding=10)
