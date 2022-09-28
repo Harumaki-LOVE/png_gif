@@ -13,8 +13,8 @@ Pillow 9.2.0
 3. インストールされていない場合は，コマンドプロンプトに "pip install Pillow" と入力. 
 
 参照
-・Qiita "pipでアップデートするときのコマンドpip update" https://qiita.com/HyunwookPark/items/242a8ceea656416b6da8 
-・GAMMASOFT "Pythonライブラリのインストール － pipの使い方"https://gammasoft.jp/python/python-library-install
+  ・Qiita "pipでアップデートするときのコマンドpip update" https://qiita.com/HyunwookPark/items/242a8ceea656416b6da8 
+  ・GAMMASOFT "Pythonライブラリのインストール － pipの使い方"https://gammasoft.jp/python/python-library-install
 
 ## 使い方
 1. pyファイルをダブルクリック，またはコマンドプロンプトからpyファイルの保存先に移動し $ Python3 png_gif.pyを実行
