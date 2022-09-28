@@ -36,8 +36,9 @@ def conductMain():
     if text:
         messagebox.showinfo("info", text)
         files = sorted(glob.glob(dirPath1 +'/*.png'))  
-        images = list(map(lambda file : PIL.Image.open(file).convert("RGBA") , files))
-　　　　　images[0].save('./image.gif',save_all = True ,format='GIF', append_images = images[1:] , duration = 300 ,transparency=255, loop = 0)
+        images = list(map(lambda file : PIL.Image.open(file) , files))
+        images[0].save('./image.gif',save_all = True ,format='GIF', append_images = images[1:] , duration = 300 ,transparency=255, loop = 0)
+
     else:
         messagebox.showerror("error", "パスの指定がありません.")
 
