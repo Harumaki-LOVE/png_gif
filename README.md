@@ -9,11 +9,11 @@ Python 3.9.13
 Pillow 9.2.0
 ### Pillowのインストールについて
 1. コマンドプロンプトに "pip list"と入力するとインストール済みのパッケージが表示されるため，Pillowがインストールされているか確認. 
-2.1 インストールされている場合
+2. インストールされている場合
 コマンドプロンプトに "pip install Pillow --upgrade" と入力. 
 
 参照 : https://qiita.com/HyunwookPark/items/242a8ceea656416b6da8
-2.2 インストールされていない場合
+3. インストールされていない場合
 コマンドプロンプトに "pip install Pillow" と入力. 
 
 参照 : https://gammasoft.jp/python/python-library-install
