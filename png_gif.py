@@ -34,10 +34,10 @@ def conductMain():
     if dirPath2:
         text += "GIFは" + dirPath2 + "に保存されました."
     if text:
-        messagebox.showinfo("info", text)
         files = sorted(glob.glob(dirPath1 +'/*.png'))  
         images = list(map(lambda file : PIL.Image.open(file) , files))
-        images[0].save('./image.gif',save_all = True ,format='GIF', append_images = images[1:] , duration = 300 ,transparency=255, loop = 0)
+        images[0].save(dirPath2+'/image3.gif',save_all = True ,format='GIF', append_images = images[1:] , duration = 400 ,transparency=255, loop = 0)
+        messagebox.showinfo("info", text)
 
     else:
         messagebox.showerror("error", "パスの指定がありません.")
