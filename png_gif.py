@@ -36,7 +36,7 @@ def conductMain():
     if text:
         files = sorted(glob.glob(dirPath1 +'/*.png'))  
         images = list(map(lambda file : PIL.Image.open(file) , files))
-        images[0].save(dirPath2+'/image3.gif',save_all = True ,format='GIF', append_images = images[1:] , duration = 400 ,transparency=255, loop = 0)
+        images[0].save(dirPath2+'/image.gif',save_all = True ,format='GIF', append_images = images[1:] , duration = 400 ,transparency=255, loop = 0)
         messagebox.showinfo("info", text)
 
     else:
